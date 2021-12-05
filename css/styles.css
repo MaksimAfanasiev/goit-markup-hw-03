@@ -14,12 +14,48 @@ body {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 a {
   text-decoration: none;
 }
+
+button {
+  border: 0;
+}
+
+/* Контейнер */
+.container {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* Хедер */
+
+.header-box {
+  border-bottom: 1px solid #ececec;
+}
+
+.nav-box {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -27,10 +63,18 @@ a {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--theme-color);
+  margin-right: 93px;
 }
 
 .logo-header-word {
   color: #000;
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-link {
@@ -39,6 +83,9 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-primary);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -50,6 +97,18 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--theme-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contact-item-link {
@@ -59,6 +118,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--text-secondary);
 }
+
 .contact-item-link:hover,
 .contact-item-link:focus {
   color: var(--theme-color);
@@ -66,15 +126,21 @@ a {
 /* Герой */
 .hero-box {
   background-color: #2f303a;
+  text-align: center;
 }
 
 .hero-box-title {
+  display: block;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fff;
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-button {
@@ -85,6 +151,11 @@ a {
   background-color: #2196f3;
   color: #fff;
   cursor: pointer;
+  min-width: 200px;
+  margin-top: 30px;
+  margin-bottom: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 
 .hero-button:hover,
@@ -93,6 +164,16 @@ a {
   color: #fff;
 }
 /* Особенности */
+.features-list {
+  display: flex;
+  margin-top: 94px;
+  justify-content: space-between;
+}
+
+.feature-item {
+  width: 270px;
+}
+
 .feature-item-title {
   font-weight: 700;
   font-size: 14px;
@@ -106,17 +187,34 @@ a {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-secondary);
+  margin-top: 10px;
 }
 /* Направления деятельности */
+
+.activities-box {
+  margin-top: 94px;
+}
+
 .activities-box-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  text-align: center;
 }
+
+.activities-list {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
 /* Наша команда */
 .team-box {
   background-color: #f5f4fa;
+  margin-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-box-title {
@@ -124,6 +222,19 @@ a {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-list-item {
+  background-color: #fff;
+  width: 270px;
+  text-align: center;
 }
 
 .team-list-item-name {
@@ -131,6 +242,7 @@ a {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-top: 30px;
 }
 
 .team-list-item-position {
@@ -138,10 +250,14 @@ a {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--text-secondary);
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 /* Футер */
 .footer-box {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-footer-word {
@@ -157,6 +273,7 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #fff;
+  margin-top: 20px;
 }
 
 .adress-item-link {
