@@ -36,13 +36,18 @@ button {
   border: 0;
 }
 
-/* Контейнер */
+/* Контейнер и секция */
 .container {
-  width: 1170px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Хедер */
@@ -164,9 +169,12 @@ button {
   color: #fff;
 }
 /* Особенности */
+
+.features-box {
+  padding-top: 94px;
+}
 .features-list {
   display: flex;
-  margin-top: 94px;
   justify-content: space-between;
 }
 
@@ -190,11 +198,6 @@ button {
   margin-top: 10px;
 }
 /* Направления деятельности */
-
-.activities-box {
-  margin-top: 94px;
-}
-
 .activities-box-title {
   font-weight: 700;
   font-size: 36px;
@@ -212,7 +215,6 @@ button {
 /* Наша команда */
 .team-box {
   background-color: #f5f4fa;
-  margin-top: 94px;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -276,6 +278,14 @@ address {
   margin-top: 20px;
 }
 
+.adress-list {
+  margin-top: 9px;
+}
+
+.adress-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .adress-item-link {
   font-size: 14px;
   line-height: 1.71;
@@ -291,6 +301,15 @@ address {
 /* 2-Портфолио-2 */
 
 /* Фильтры */
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
 
 .filter-item-botton {
   font-weight: 500;
@@ -298,6 +317,8 @@ address {
   line-height: 1.62;
   letter-spacing: 0.03em;
   background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 
 .filter-item-botton:hover,
@@ -308,12 +329,33 @@ address {
 }
 
 /* Проекты */
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  /* border: 1px solid #eee; */
+}
+
+.project-item-text {
+  border: 1px solid #eeeeee;
+}
+
 .project-item-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-primary);
+  margin-top: 20px;
 }
 
 .project-item-desc {
@@ -321,4 +363,6 @@ address {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--text-secondary);
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
