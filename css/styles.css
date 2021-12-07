@@ -1,5 +1,7 @@
 :root {
   --theme-color: #2196f3;
+  --secondary-theme-color: #2f303a;
+  --secondary-background-color: #f5f4fa;
   --text-primary: #212121;
   --text-secondary: #757575;
   --primary-font: 'Roboto';
@@ -40,7 +42,7 @@ button {
   border: 0;
 }
 
-/* Контейнер и секция */
+/* Контейнер_секция_visually-hidden */
 .container {
   width: 1200px;
   margin-left: auto;
@@ -52,6 +54,14 @@ button {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /* Хедер */
@@ -134,7 +144,7 @@ button {
 }
 /* Герой */
 .hero-box {
-  background-color: #2f303a;
+  background-color: var(--secondary-theme-color);
   text-align: center;
 }
 
@@ -179,11 +189,14 @@ button {
 }
 .features-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .feature-item {
   width: 270px;
+}
+
+.feature-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .feature-item-title {
@@ -218,7 +231,7 @@ button {
 
 /* Наша команда */
 .team-box {
-  background-color: #f5f4fa;
+  background-color: var(--secondary-background-color);
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -234,7 +247,6 @@ button {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .team-list-item {
@@ -243,12 +255,20 @@ button {
   text-align: center;
 }
 
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list-item-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-list-item-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-top: 30px;
 }
 
 .team-list-item-position {
@@ -257,11 +277,11 @@ button {
   letter-spacing: 0.03em;
   color: var(--text-secondary);
   margin-top: 10px;
-  margin-bottom: 30px;
 }
+
 /* Футер */
 .footer-box {
-  background-color: #2f303a;
+  background-color: var(--secondary-theme-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -320,7 +340,7 @@ address {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  background-color: #f5f4fa;
+  background-color: var(--secondary-background-color);
   border-radius: 4px;
   padding: 6px 22px;
 }
@@ -346,11 +366,16 @@ address {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
-  /* border: 1px solid #eee; */
 }
 
 .project-item-text {
-  border: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 
 .project-item-name {
@@ -359,7 +384,6 @@ address {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-primary);
-  margin-top: 20px;
 }
 
 .project-item-desc {
@@ -368,5 +392,4 @@ address {
   letter-spacing: 0.03em;
   color: var(--text-secondary);
   margin-top: 4px;
-  margin-bottom: 20px;
 }
