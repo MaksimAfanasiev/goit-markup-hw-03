@@ -146,18 +146,18 @@ button {
 .hero-box {
   background-color: var(--secondary-theme-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-box-title {
-  display: block;
-  width: 696px;
+  max-width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fff;
-  padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -172,7 +172,6 @@ button {
   cursor: pointer;
   min-width: 200px;
   margin-top: 30px;
-  margin-bottom: 200px;
   border-radius: 4px;
   padding: 10px 32px;
 }
@@ -226,7 +225,10 @@ button {
 .activities-list {
   display: flex;
   margin-top: 50px;
-  justify-content: space-between;
+}
+
+.activity-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Наша команда */
